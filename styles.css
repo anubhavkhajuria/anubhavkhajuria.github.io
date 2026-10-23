@@ -762,3 +762,15 @@ body::before {
     .header-social-profile span { display: none; }
     .site-nav { order: 2; padding-bottom: 10px; }
 }
+
+.package-visual { max-height: none; }
+.package-diagram { width: 100%; height: auto; max-height: none; }
+.tim-label-plate { fill: rgba(14,19,19,.97); stroke: #c5a77d; stroke-width: 2; }
+.tim-label-leader { fill: none; stroke: #e0c89e; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.tim-callout-label { fill: #fff4dc; stroke: #111716; stroke-width: 3px; paint-order: stroke; stroke-linejoin: round; font-family: var(--body); font-size: 16px; font-weight: 800; letter-spacing: .035em; text-anchor: start; pointer-events: none; }
+
+@media (max-width: 650px) {
+    .package-visual { display: block; aspect-ratio: auto; overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; scrollbar-color: #55635e #14191c; scrollbar-width: thin; }
+    .package-diagram { width: clamp(820px, 155vw, 1000px); max-width: none; }
+    .tim-callout-label.label-mobile { font-size: 14px; letter-spacing: .025em; }
+}
