@@ -529,3 +529,52 @@ code, kbd, samp { font-family: "Inter", sans-serif; }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+.sim-chip { min-height: 0; overflow: visible; padding: 19px; background: radial-gradient(ellipse at 50% 47%,rgba(44,148,135,.13),transparent 58%),linear-gradient(145deg,#101b1c,#101413 72%); }
+.package-scene { display: block; min-height: 0; padding: 12px 0 0; }
+.package-visual { display: block; min-height: 0; overflow: visible; border: 1px solid rgba(137,228,213,.12); border-radius: 14px; background: radial-gradient(ellipse at 50% 44%,rgba(38,117,111,.16),transparent 55%),linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005)); }
+.package-diagram { display: block; width: 100%; height: auto; overflow: visible; }
+.component-label { fill: #f2fff9; stroke: rgba(9,25,23,.85); stroke-width: 3px; paint-order: stroke; stroke-linejoin: round; font-family: var(--body); font-size: 14px; font-weight: 800; letter-spacing: .055em; text-anchor: middle; pointer-events: none; }
+.component-label-dark { fill: #362718; stroke: rgba(255,221,159,.5); }
+.callout-label { fill: #d9eee7; stroke: #101816; stroke-width: 3px; paint-order: stroke; stroke-linejoin: round; font-family: var(--body); font-size: 12px; font-weight: 800; letter-spacing: .07em; pointer-events: none; }
+.package-component { cursor: pointer; transform-box: fill-box; transform-origin: center; transition: filter .18s ease; }
+.package-component:hover { filter: brightness(1.23) drop-shadow(0 0 7px rgba(119,245,213,.4)); }
+.package-component:focus-visible { outline: 3px solid #edff9b; outline-offset: 5px; }
+.package-component:focus-visible .component-face { stroke: #e7ff98; stroke-width: 3px; }
+.package-component.is-selected { filter: brightness(1.16) drop-shadow(0 0 9px rgba(180,255,170,.7)); }
+.package-component.is-selected .component-face { stroke: #e7ff98; stroke-width: 3px; }
+.package-component[data-part="rdl"] path:nth-child(2) { stroke-dasharray: 5 11; animation: package-trace-flow 2.2s linear infinite; }
+.package-scale-note { margin: 5px 6px 0; color: #8fa9a1; font-size: 10px; text-align: right; }
+.package-inspector { display: grid; min-height: 0; grid-template-columns: auto auto minmax(0,1fr); align-items: baseline; gap: 7px 14px; margin-top: 10px; padding: 12px 15px; border: 1px solid rgba(132,218,207,.15); border-radius: 10px; background: rgba(30,50,46,.42); }
+.package-detail-kicker { color: #89dfcf; font-size: 9px; font-weight: 750; letter-spacing: .1em; white-space: nowrap; }
+.package-inspector strong { color: #effbf7; font-size: 14px; font-weight: 700; }
+.package-inspector p { margin: 0; color: #b8ccc5; font-size: 13px; line-height: 1.4; }
+.package-inspector > p:not(.package-detail-kicker):not(.package-detail-hint) { margin: 0; font-size: 13px; }
+.interest-block { min-height: 0; padding: 16px 18px; border-radius: 13px; }
+.interest-block .micro-label { margin-bottom: 9px; }
+.coursework-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.coursework-tags span { padding: 5px 9px; border: 1px solid rgba(155,191,174,.17); border-radius: 999px; background: rgba(255,255,255,.035); color: #c9d4ce; font-size: 12px; line-height: 1.25; }
+.interest-personal { display: grid; min-height: 142px; grid-column: auto; grid-template-columns: 138px minmax(0,1fr); overflow: hidden; padding: 0; border-color: rgba(191,123,77,.32); background: linear-gradient(120deg,rgba(97,46,30,.23),rgba(255,255,255,.018)); }
+.dota-art { position: relative; min-height: 142px; overflow: hidden; background: radial-gradient(ellipse at 50% 45%,#9d5b2c,#291b16 74%); }
+.dota-game-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: .94; }
+.dota-art::after { position: absolute; inset: 0; background: linear-gradient(0deg,rgba(12,12,11,.4),transparent 56%); content: ""; }
+.dota-mark { position: absolute; z-index: 2; top: 8px; left: 8px; padding: 3px 6px; border: 1px solid rgba(255,235,205,.4); border-radius: 4px; background: rgba(24,15,12,.78); color: #fff0dc; font-size: 10px; font-weight: 800; letter-spacing: .12em; }
+.dota-ogre-art { position: absolute; z-index: 1; right: 2%; bottom: 0; width: 59%; height: 84%; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 5px 10px rgba(0,0,0,.68)); }
+.dota-copy { display: flex; flex-direction: column; justify-content: center; padding: 12px 15px; }
+.dota-copy .micro-label { margin: 0 0 6px; color: #e3a973; font-size: 9px; }
+.dota-copy h3 { margin: 0; font-size: 16px; font-weight: 700; letter-spacing: -.02em; line-height: 1.25; }
+.dota-copy .skill-line { margin-top: 5px; color: #aab4ad; font-size: 11px; line-height: 1.35; }
+@keyframes package-trace-flow { to { stroke-dashoffset: -64; } }
+
+@media (max-width: 650px) {
+    .sim-chip { padding: 13px 10px 14px; }
+    .package-visual { overflow-x: auto; overflow-y: hidden; }
+    .package-diagram { width: 1000px; max-width: none; }
+    .package-inspector { grid-template-columns: 1fr; gap: 3px; padding: 10px 12px; }
+    .package-inspector p { font-size: 12px; }
+    .interest-personal { grid-template-columns: 116px minmax(0,1fr); }
+    .dota-art { min-height: 142px; }
+    .dota-copy { padding: 10px 11px; }
+    .dota-copy h3 { font-size: 14px; }
+    .dota-copy .skill-line { font-size: 10px; }
+}
