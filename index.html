@@ -13,8 +13,8 @@
     <title>Anubhab Khajuria — Researcher &amp; Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -45,7 +45,7 @@
                     <a class="button button-primary" href="#research">Explore my work <span aria-hidden="true">↓</span></a>
                     <a class="text-link" href="mailto:anubhavkhajuria5@gmail.com">anubhavkhajuria5@gmail.com <span aria-hidden="true">↗</span></a>
                 </div>
-                <p class="hero-egg-hint">A small secret: type or tap <button class="egg-trigger" type="button" data-egg="cuda" aria-label="Show the GPU note">cuda</button>, <button class="egg-trigger" type="button" data-egg="mlir" aria-label="Show the compiler note">mlir</button>, or <button class="egg-trigger" type="button" data-egg="chip" aria-label="Show the chiplet note">chip</button>.</p>
+                <p class="hero-egg-hint">A few hidden-in-plain-sight details: tap <button class="egg-trigger" type="button" data-egg="cuda" aria-label="Open the GPU programming animation">CUDA</button>, <button class="egg-trigger" type="button" data-egg="mlir" aria-label="Open the compiler animation">MLIR</button>, or <button class="egg-trigger" type="button" data-egg="chip" aria-label="Open the chiplet animation">chiplets</button>.</p>
                 <div class="hero-meta" aria-label="Current role">
                     <span>Currently</span>
                     <p>PhD Student <span aria-hidden="true">·</span> Washington State University, Pullman</p>
@@ -53,7 +53,7 @@
             </div>
 
             <figure class="hero-portrait">
-                <img src="my.png" alt="Anubhab outdoors by a lake" width="935" height="806">
+                <img src="/my.png" alt="Anubhab outdoors by a lake" width="935" height="806">
                 <figcaption>
                     <span>ANUBHAB KHAJURIA</span>
                     <span>Systems · Compilers · Compute</span>
@@ -101,10 +101,56 @@
             </div>
         </section>
 
+        <section class="section lab-section" id="lab" aria-labelledby="lab-title">
+            <div class="container">
+                <div class="section-heading section-heading-row">
+                    <div><p class="section-index">02 <span>/</span> Hidden in the stack</p><h2 id="lab-title">Color outside<br><em>the lines.</em></h2></div>
+                    <p class="section-aside">Tap a card to set the hardware<br>and compiler in motion.</p>
+                </div>
+                <div class="egg-grid">
+                    <button class="egg-card egg-card-gpu egg-trigger" type="button" data-egg="cuda" aria-label="Launch the CUDA warp animation">
+                        <span class="egg-card-top"><span>GPU PROGRAMMING</span><span>01 / CUDA</span></span>
+                        <span class="gpu-preview" aria-hidden="true"><span class="gpu-core-preview">SM</span><span class="gpu-wave"></span><span class="gpu-lanes-preview"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
+                        <span class="egg-card-bottom"><strong>One warp. Many lanes.</strong><span>Open the simulation <b aria-hidden="true">↗</b></span></span>
+                    </button>
+                    <button class="egg-card egg-card-compiler egg-trigger" type="button" data-egg="mlir" aria-label="Launch the MLIR compiler lowering animation">
+                        <span class="egg-card-top"><span>COMPILERS</span><span>02 / MLIR → LLVM</span></span>
+                        <span class="compiler-preview" aria-hidden="true"><span class="preview-op preview-tensor">tensor</span><span class="preview-arrow">↓</span><span class="preview-op preview-linalg">linalg</span><span class="preview-arrow">↓</span><span class="preview-op preview-vector">vector</span><span class="preview-arrow">↓</span><span class="preview-op preview-llvm">LLVM</span></span>
+                        <span class="egg-card-bottom"><strong>Lower, then optimize.</strong><span>Open the compiler trace <b aria-hidden="true">↗</b></span></span>
+                    </button>
+                    <button class="egg-card egg-card-chip egg-trigger" type="button" data-egg="chip" aria-label="Launch the 2.5D and 3D chiplet animation">
+                        <span class="egg-card-top"><span>ADVANCED PACKAGING</span><span>03 / CHIPLETS</span></span>
+                        <span class="chip-preview" aria-hidden="true"><span class="chip-preview-board"><i class="chip-die chip-die-a"></i><i class="chip-die chip-die-b"></i><i class="chip-die chip-die-c"></i><i class="chip-die chip-die-d"></i><i class="chip-bridge"></i></span><span class="chip-preview-label">2.5D + 3D</span></span>
+                        <span class="egg-card-bottom"><strong>Compute, memory, connected.</strong><span>Open the package view <b aria-hidden="true">↗</b></span></span>
+                    </button>
+                </div>
+                <div class="stack-gallery" aria-label="Compiler and gaming inspiration">
+                    <figure class="stack-photo stack-photo-llvm">
+                        <a href="https://llvm.org/" target="_blank" rel="noreferrer" aria-label="Visit the LLVM project">
+                            <img src="https://llvm.org/img/LLVMWyvernBig.png" alt="LLVM's wyvern mark" loading="lazy" decoding="async">
+                            <figcaption><span>LLVM</span><span>Compiler infrastructure</span></figcaption>
+                        </a>
+                    </figure>
+                    <figure class="stack-photo stack-photo-mlir">
+                        <a href="https://mlir.llvm.org/" target="_blank" rel="noreferrer" aria-label="Visit the MLIR project">
+                            <img src="https://mlir.llvm.org/LogoAssets/logo/PNG/full_color/mlir-identity-03.png" alt="MLIR identity mark" loading="lazy" decoding="async">
+                            <figcaption><span>MLIR</span><span>Multi-level intermediate representation</span></figcaption>
+                        </a>
+                    </figure>
+                    <figure class="stack-photo stack-photo-ogre">
+                        <a href="https://www.dota2.com/workshop/requirements/ogre_magi?l=english" target="_blank" rel="noreferrer" aria-label="Ogre Magi, Dota 2 hero">
+                            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/ogre_magi.png" alt="Ogre Magi, Anubhab's favorite Dota 2 hero" loading="lazy" decoding="async">
+                            <figcaption><span>OGRE MAGI</span><span>Two heads. One lucky cast.</span></figcaption>
+                        </a>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
         <section class="section section-ruled" id="experience" aria-labelledby="experience-title">
             <div class="container">
                 <div class="section-heading section-heading-row">
-                    <div><p class="section-index">02 <span>/</span> Experience</p><h2 id="experience-title">Places I've <em>built.</em></h2></div>
+                    <div><p class="section-index">03 <span>/</span> Experience</p><h2 id="experience-title">Places I've <em>built.</em></h2></div>
                     <p class="section-aside">Research, engineering<br>and a little bit of everything between.</p>
                 </div>
 
@@ -154,7 +200,7 @@
 
         <section class="section container" id="work" aria-labelledby="work-title">
             <div class="section-heading section-heading-row">
-                <div><p class="section-index">03 <span>/</span> Selected work</p><h2 id="work-title">Ideas made <em>concrete.</em></h2></div>
+                <div><p class="section-index">04 <span>/</span> Selected work</p><h2 id="work-title">Systems in <em>motion.</em></h2></div>
                 <p class="section-aside">A few projects where software<br>meets the machine.</p>
             </div>
             <div class="project-grid">
@@ -189,7 +235,7 @@
         <section class="section section-ruled" id="writing" aria-labelledby="writing-title">
             <div class="container">
                 <div class="section-heading section-heading-row">
-                    <div><p class="section-index">04 <span>/</span> Writing &amp; community</p><h2 id="writing-title">Sharing the <em>work.</em></h2></div>
+                    <div><p class="section-index">05 <span>/</span> Writing &amp; community</p><h2 id="writing-title">Sharing the <em>work.</em></h2></div>
                     <p class="section-aside">Papers, talks, teaching<br>and academic service.</p>
                 </div>
                 <div class="writing-layout">
@@ -222,7 +268,7 @@
 
         <section class="section container" id="interests" aria-labelledby="interests-title">
             <div class="section-heading">
-                <p class="section-index">05 <span>/</span> Beyond the page</p>
+                <p class="section-index">06 <span>/</span> Beyond the page</p>
                 <h2 id="interests-title">Tools, topics<br><em>and other interests.</em></h2>
             </div>
             <div class="interests-grid">
@@ -235,7 +281,7 @@
 
         <section class="contact-section" id="contact" aria-labelledby="contact-title">
             <div class="container contact-inner">
-                <p class="section-index">06 <span>/</span> What's next</p>
+                <p class="section-index">07 <span>/</span> What's next</p>
                 <h2 id="contact-title">Good work happens<br><em>at the boundaries.</em></h2>
                 <p>I’m a PhD student at Washington State University, Pullman, working on 2.5D and 3D chiplet-based systems alongside deep learning compilers and hardware-software co-design. I’d be glad to connect with others building systems across this stack.</p>
                 <a class="button button-primary" href="mailto:anubhavkhajuria5@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
@@ -246,83 +292,48 @@
     <footer class="site-footer">
         <div class="container footer-inner">
             <a class="wordmark" href="#home"><span class="wordmark-mark" aria-hidden="true">ak</span><span>Anubhab Khajuria</span></a>
-            <p>Designed with care. Built for the curious.</p>
             <div class="footer-links"><a href="https://github.com/anubhavkhajuria" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/anubhab-53035b1aa/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
             <p class="egg-hint">The little notes are still here: <button class="egg-trigger" type="button" data-egg="cuda" aria-label="Show the GPU note">cuda</button>, <button class="egg-trigger" type="button" data-egg="mlir" aria-label="Show the compiler note">mlir</button>, <button class="egg-trigger" type="button" data-egg="chip" aria-label="Show the chiplet note">chip</button>.</p>
         </div>
     </footer>
 
-    <aside class="easter-egg" id="easter-egg" aria-live="polite" aria-atomic="true" hidden>
-        <div class="egg-heading"><span class="micro-label" id="egg-label">SYSTEM NOTE</span><button class="egg-close" id="egg-close" type="button" aria-label="Close note">×</button></div>
-        <p class="egg-title" id="egg-title"></p>
-        <p class="egg-copy" id="egg-copy"></p>
-        <div class="warp-grid" id="warp-grid" aria-label="A grid of 32 GPU lanes" hidden></div>
-        <div class="chiplet-diagram" id="chiplet-diagram" aria-label="A simple chiplet package diagram" hidden>
-            <span class="package-label">PACKAGE</span>
-            <div class="chiplet-layer layer-3d"><span>Compute</span><span>Compute</span><span>Cache</span></div>
-            <div class="chiplet-layer layer-2d"><span>Compute</span><span>IO</span><span>Memory</span></div>
-            <span class="package-note">2.5D / 3D integration</span>
+    <dialog class="egg-dialog" id="egg-dialog" aria-labelledby="egg-title">
+        <div class="egg-dialog-inner">
+            <div class="egg-heading"><div><p class="micro-label" id="egg-label">SYSTEM NOTE</p><h2 class="egg-title" id="egg-title"></h2></div><button class="egg-close" id="egg-close" type="button" aria-label="Close animation">×</button></div>
+            <p class="egg-copy" id="egg-copy"></p>
+            <div class="egg-stage" id="egg-stage"></div>
+            <p class="egg-dialog-foot"><span id="egg-foot-label">SYSTEMS / COMPILERS / HARDWARE</span><span>ESC TO CLOSE</span></p>
         </div>
-    </aside>
+    </dialog>
 
-    <script>
-        const egg = document.getElementById('easter-egg');
-        const eggLabel = document.getElementById('egg-label');
-        const eggTitle = document.getElementById('egg-title');
-        const eggCopy = document.getElementById('egg-copy');
-        const warpGrid = document.getElementById('warp-grid');
-        const chipletDiagram = document.getElementById('chiplet-diagram');
-        let typed = '';
-        let dismissTimer;
+    <template id="gpu-template">
+        <div class="sim sim-gpu" aria-label="An animated grid of GPU warp lanes">
+            <div class="sim-topline"><span>CUDA / WARP EXECUTION</span><span class="sim-live"><i></i> RUNNING</span></div>
+            <div class="gpu-sim-layout"><div class="sim-sm">
+                <span class="sim-small-label">STREAMING MULTIPROCESSOR</span><strong>SM <span>00</span></strong><span class="sm-status">instruction: FMA</span>
+            </div><div class="warp-machine"><div class="warp-machine-label">WARP 00 <span>32 THREADS</span></div><div class="warp-grid" id="warp-grid"></div><div class="warp-instruction"><span>active mask</span><code>0xffffffff</code></div></div></div>
+            <div class="sim-caption"><span>Each lane works on its own data.</span><span>Coalesced access → bandwidth in motion</span></div>
+        </div>
+    </template>
 
-        for (let lane = 0; lane < 32; lane += 1) {
-            const cell = document.createElement('span');
-            cell.textContent = String(lane).padStart(2, '0');
-            cell.setAttribute('aria-hidden', 'true');
-            warpGrid.append(cell);
-        }
+    <template id="mlir-template">
+        <div class="sim sim-mlir" aria-label="An animated compiler lowering pipeline from tensor to LLVM">
+            <div class="sim-topline"><span>MLIR → LLVM / PROGRESSIVE LOWERING</span><span class="sim-live"><i></i> COMPILING</span></div>
+            <div class="lowering-scene"><div class="lowering-beam"></div><article class="lowering-node lowering-n1"><span>01 / MODEL</span><strong>tensor.matmul</strong><small>semantic operation</small></article><article class="lowering-node lowering-n2"><span>02 / LINALG</span><strong>linalg.matmul</strong><small>structured loops</small></article><article class="lowering-node lowering-n3"><span>03 / VECTOR</span><strong>vector.contract</strong><small>hardware-width lanes</small></article><article class="lowering-node lowering-n4"><span>04 / TARGET</span><strong>LLVM IR</strong><small>instructions ready</small></article></div>
+            <div class="sim-caption"><span>Meaning is preserved as details become concrete.</span><span>IR is the bridge between intent and silicon</span></div>
+        </div>
+    </template>
 
-        function showNote(mode) {
-            window.clearTimeout(dismissTimer);
-            egg.hidden = false;
-            warpGrid.hidden = true;
-            chipletDiagram.hidden = true;
-            if (mode === 'cuda') {
-                eggLabel.textContent = 'GPU NOTE / WARP';
-                eggTitle.textContent = '32 lanes. One instruction.';
-                eggCopy.textContent = 'Keep work coalesced, limit divergence, and make the hardware count.';
-                warpGrid.hidden = false;
-            } else if (mode === 'mlir') {
-                eggLabel.textContent = 'COMPILER NOTE / LOWERING';
-                eggTitle.textContent = 'High-level intent, step by step.';
-                eggCopy.textContent = 'tensor op → structured IR → loops and vectors → target instructions';
-            } else {
-                eggLabel.textContent = 'CHIPLET NOTE / PACKAGING';
-                eggTitle.textContent = 'A system can be a small constellation.';
-                eggCopy.textContent = 'Chiplets bring compute, memory, and I/O together across a package.';
-                chipletDiagram.hidden = false;
-            }
-            dismissTimer = window.setTimeout(() => { egg.hidden = true; }, 8000);
-        }
+    <template id="chip-template">
+        <div class="sim sim-chip" aria-label="An animated 2.5D and 3D chiplet package">
+            <div class="sim-topline"><span>ADVANCED PACKAGING / HETEROGENEOUS COMPUTE</span><span class="sim-live"><i></i> LINK ACTIVE</span></div>
+            <div class="package-scene"><div class="package-side-label">3D STACK</div><div class="package-stack">
+                <div class="stack-chip stack-hbm"><span>HBM</span><small>memory</small></div><div class="stack-chip stack-cache"><span>CACHE</span><small>vertical link</small></div><div class="stack-chip stack-compute"><span>COMPUTE</span><small>chiplet A</small></div>
+            </div><div class="package-interposer"><div class="interposer-die die-cpu"><span>CPU</span><small>control</small></div><div class="interposer-die die-gpu"><span>GPU</span><small>compute</small></div><div class="interposer-die die-io"><span>I/O</span><small>connect</small></div><div class="interposer-wire wire-a"></div><div class="interposer-wire wire-b"></div><div class="interposer-wire wire-c"></div><span class="interposer-label">2.5D INTERPOSER</span></div><div class="package-side-label">DATA / POWER / THERMALS</div></div>
+            <div class="sim-caption"><span>Keep compute close to the data.</span><span>2.5D interposer + 3D stacking</span></div>
+        </div>
+    </template>
 
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') {
-                egg.hidden = true;
-                typed = '';
-                return;
-            }
-            if (event.target instanceof HTMLElement && /^(INPUT|TEXTAREA|SELECT)$/.test(event.target.tagName)) return;
-            if (event.key.length !== 1 || !/[a-z]/i.test(event.key)) return;
-            typed = (typed + event.key.toLowerCase()).slice(-4);
-            if (typed === 'cuda' || typed === 'mlir' || typed === 'chip') {
-                showNote(typed);
-                typed = '';
-            }
-        });
-        document.getElementById('egg-close').addEventListener('click', () => { egg.hidden = true; });
-        document.querySelectorAll('.egg-trigger').forEach((trigger) => {
-            trigger.addEventListener('click', () => showNote(trigger.dataset.egg));
-        });
-    </script>
+    <script src="/site.js" is:inline></script>
 </body>
 </html>
