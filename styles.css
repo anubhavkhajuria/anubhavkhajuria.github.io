@@ -667,3 +667,30 @@ body::before {
 @media (max-width: 650px) {
     .lowering-beam { background: linear-gradient(#aaa6bc, #8faeae); }
 }
+
+.header-inner { gap: clamp(12px, 1.8vw, 22px); }
+.header-socials { display: flex; flex: 0 0 auto; align-items: center; gap: 13px; white-space: nowrap; }
+.header-social-link { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 12px; font-weight: 600; transition: color .18s ease; }
+.header-social-link svg { width: 15px; height: 15px; flex: 0 0 auto; }
+.header-social-link:hover, .header-social-link:focus-visible { color: var(--ink); }
+.header-social-link:focus-visible { outline: 2px solid var(--mint); outline-offset: 4px; border-radius: 2px; }
+.footer-inner { display: flex; justify-content: flex-start; }
+.interest-title { margin: 0 0 4px; color: var(--ink); font-size: 18px; font-weight: 650; letter-spacing: -.02em; }
+.interest-cooking .micro-label { color: var(--mint); }
+.interest-achievement .micro-label { color: var(--amber); }
+.achievement-rank { margin: 0 0 2px; color: var(--ink); font-size: 28px; font-weight: 650; letter-spacing: -.045em; line-height: 1.05; }
+.interest-achievement .skill-line { color: var(--muted); font-size: 13px; }
+
+@media (max-width: 780px) {
+    .header-contact { display: none; }
+    .header-socials { margin-left: auto; }
+}
+
+@media (max-width: 650px) {
+    .wordmark { order: 0; }
+    .header-socials { order: 1; gap: 11px; }
+    .header-social-link { gap: 4px; font-size: 11px; }
+    .header-social-link svg { width: 14px; height: 14px; }
+    .site-nav { order: 2; }
+    .header-contact { display: none; }
+}
