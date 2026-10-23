@@ -1,18 +1,18 @@
 :root {
     color-scheme: dark;
-    --bg: #101311;
-    --panel: #171b19;
-    --panel-raised: #1d2320;
-    --ink: #f2f2ea;
-    --muted: #a2aaa2;
-    --quiet: #89938b;
-    --line: rgba(224, 235, 225, .12);
-    --line-bright: rgba(224, 235, 225, .23);
-    --mint: #76b900;
-    --cyan: #68e5e0;
-    --pink: #ff6fc6;
-    --violet: #a88cff;
-    --amber: #ffd75e;
+    --bg: #0e1114;
+    --panel: #151a1e;
+    --panel-raised: #1b2227;
+    --ink: #edf0f1;
+    --muted: #aab4b9;
+    --quiet: #818d93;
+    --line: rgba(220, 230, 234, .1);
+    --line-bright: rgba(220, 230, 234, .18);
+    --mint: #9caf9f;
+    --cyan: #8faeae;
+    --pink: #b49fa8;
+    --violet: #a2a1b4;
+    --amber: #bda888;
     --display: "Inter", sans-serif;
     --body: "Inter", sans-serif;
     --mono: "Inter", sans-serif;
@@ -577,4 +577,93 @@ code, kbd, samp { font-family: "Inter", sans-serif; }
     .dota-copy { padding: 10px 11px; }
     .dota-copy h3 { font-size: 14px; }
     .dota-copy .skill-line { font-size: 10px; }
+}
+
+body::before {
+    background: radial-gradient(ellipse at 72% 8%, rgba(132, 157, 141, .035), transparent 34%), linear-gradient(rgba(255,255,255,.008) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.008) 1px, transparent 1px);
+    background-size: auto, 56px 56px, 56px 56px;
+}
+
+.site-header { background: rgba(14, 17, 20, .92); }
+.wordmark-mark { border-color: rgba(156, 177, 161, .28); }
+.status-dot, .sim-live i { box-shadow: 0 0 8px rgba(156, 177, 161, .28); }
+.hero-portrait::before { border-color: rgba(156, 177, 161, .18); }
+.hero-portrait { background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.008)); }
+.pipeline-card { background: linear-gradient(155deg, #171d20, #12171a); box-shadow: 0 18px 48px rgba(0,0,0,.16); }
+.pipeline-target { border-color: rgba(156, 177, 161, .27); background: rgba(156, 177, 161, .06); }
+.lab-section { border-color: var(--line); background: linear-gradient(180deg, rgba(255,255,255,.012), transparent 32%, rgba(255,255,255,.008)); }
+.lab-section .section-index, .lab-section .section-heading h2 em { color: var(--mint); }
+.simulation-card { border-color: var(--line); border-radius: 14px; background-color: var(--panel); }
+.simulation-card:hover, .simulation-card:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(0,0,0,.2); }
+.simulation-card-gpu { --card-accent: #9caf82; background: linear-gradient(145deg, #1b211b, #151a18 78%); }
+.simulation-card-compiler { --card-accent: #a6a2b8; background: linear-gradient(145deg, #1d1d25, #16191d 78%); }
+.simulation-card-chip { --card-accent: #b69c7d; background: linear-gradient(145deg, #211d19, #171a1b 78%); }
+.gpu-core-preview { border-color: rgba(156, 177, 126, .58); background: #1b251a; box-shadow: 0 0 18px rgba(126, 153, 100, .14), inset 0 0 12px rgba(126, 153, 100, .08); color: #c0d0a9; }
+.gpu-wave { border-color: rgba(156, 177, 126, .42); box-shadow: 0 0 0 16px rgba(156, 177, 126, .045), 0 0 0 32px rgba(156, 177, 126, .025); }
+.gpu-lanes-preview i, .gpu-lanes-preview i:nth-child(3n) { border-color: rgba(156, 177, 126, .45); background: rgba(156, 177, 126, .16); }
+.preview-op { border-color: rgba(168, 164, 184, .33); background: rgba(168, 164, 184, .06); animation: none; }
+.preview-tensor, .preview-linalg, .preview-vector, .preview-llvm { border-color: rgba(168, 164, 184, .5); }
+.chip-preview-board { border-color: rgba(182, 156, 125, .52); background: linear-gradient(135deg, rgba(182,156,125,.1), rgba(143,174,174,.06)); }
+.chip-die { border-color: rgba(182,156,125,.68); background: linear-gradient(145deg, rgba(182,156,125,.48), rgba(104,83,63,.5)); box-shadow: inset 0 0 12px rgba(255,255,255,.08); }
+.chip-die-b, .chip-die-c { border-color: rgba(143,174,174,.68); background: linear-gradient(145deg,rgba(143,174,174,.45),rgba(61,89,96,.56)); }
+.chip-bridge { height: 2px; background: linear-gradient(90deg,transparent,#b69c7d,#d5d2c8,#8faeae,transparent); box-shadow: 0 0 7px rgba(182,156,125,.38); }
+.chip-preview-label { color: #c5b397; }
+.timeline::before { background: linear-gradient(var(--mint), rgba(156,177,161,.06)); }
+.timeline-marker { box-shadow: none; }
+.project-card { border-radius: 14px; background: linear-gradient(155deg, rgba(255,255,255,.032), rgba(255,255,255,.008)); }
+.project-card:hover { border-color: rgba(156,177,161,.32); box-shadow: 0 14px 34px rgba(0,0,0,.18); }
+.project-art-mlir { background: radial-gradient(ellipse at center, rgba(156,177,161,.12), transparent 62%), #dfe3df; }
+.project-art-llvm { background: radial-gradient(ellipse at center, rgba(143,174,174,.12), transparent 64%), #dfe3e2; }
+.project-art-quant { background: linear-gradient(145deg, #222329, #191c20); }
+.project-art-analysis { background: linear-gradient(145deg, #24211e, #191c20); }
+.quant-compare i { background: linear-gradient(90deg, #a6a2b8, #8faeae); }
+.quant-compare b { color: #b8b5c7; }
+.analysis-flow { color: #d7d1c7; }
+.analysis-flow span { border-color: rgba(182,156,125,.3); background: rgba(182,156,125,.06); }
+.analysis-flow i { color: #b69c7d; }
+.contact-section { background: linear-gradient(145deg, #14191c, #121619 72%); }
+.simulation-dialog { border-color: rgba(220,230,234,.16); background: #101417; box-shadow: 0 24px 80px rgba(0,0,0,.52); }
+.simulation-dialog::backdrop { background: rgba(5,8,10,.78); }
+.simulation-stage { border-color: rgba(220,230,234,.1); background: #14191c; }
+.sim { --sim-accent: #9caf82; background: linear-gradient(145deg, #1c241c, #131819 76%); }
+.sim-mlir { --sim-accent: #aaa6bc; background: linear-gradient(145deg, #222129, #14191c 78%); }
+.sim-chip { --sim-accent: #b69c7d; }
+.sim-live i { box-shadow: 0 0 7px rgba(156,177,161,.28); }
+.sim-sm { border-color: rgba(156,177,126,.4); background: linear-gradient(145deg,rgba(156,177,126,.09),rgba(255,255,255,.012)); box-shadow: inset 0 0 22px rgba(156,177,126,.035); }
+.sim-small-label, .sm-status, .warp-instruction { color: #bac4b4; }
+.sim-sm strong { color: #e3e9dd; }
+.warp-machine { border-color: rgba(156,177,126,.2); background: rgba(13,19,14,.7); box-shadow: 0 12px 34px rgba(0,0,0,.18), inset 0 0 24px rgba(156,177,126,.025); }
+.warp-lane, .warp-lane:nth-child(4n + 2), .warp-lane:nth-child(4n + 3) { border-color: rgba(156,177,126,.35); background: rgba(156,177,126,.08); color: #d6dfcc; }
+.warp-lane::after { background: linear-gradient(90deg,transparent,rgba(220,230,210,.28),transparent); }
+.lowering-beam, .lowering-beam::after { background: linear-gradient(90deg, #aaa6bc, #8faeae); box-shadow: none; }
+.lowering-beam::after { background: #c3c2c8; }
+.lowering-node { border-color: rgba(168,164,184,.26); background: rgba(28,28,34,.97); box-shadow: 0 10px 26px rgba(0,0,0,.2); animation: node-lower .8s calc(var(--step) * .25s) both; }
+.lowering-node span, .lowering-n1 span, .lowering-n3 span { color: #b8b4c7; }
+.lowering-node small { color: #9b9da4; }
+.lowering-n1, .lowering-n2, .lowering-n3, .lowering-n4 { border-color: rgba(168,164,184,.36); box-shadow: 0 10px 26px rgba(0,0,0,.2); }
+.lowering-n4 { border-color: rgba(143,174,174,.4); }
+.sim-chip { background: linear-gradient(145deg,#1d2221,#14191a 72%); }
+.sim-chip .sim-topline { color: #b4c1ba; }
+.package-visual { border-color: rgba(220,230,234,.12); background: linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.004)); }
+.package-diagram { filter: saturate(.68); }
+.component-label-dark { fill: #e1d5c6; stroke: rgba(24,25,26,.78); }
+.callout-label { fill: #d0d6d7; stroke: #111619; }
+.package-component:hover { filter: brightness(1.08); }
+.package-component:focus-visible { outline-color: #c1d0c4; }
+.package-component:focus-visible .component-face, .package-component.is-selected .component-face { stroke: #c1d0c4; stroke-width: 3px; }
+.package-component.is-selected { filter: brightness(1.08); }
+.package-scale-note { color: #909ca1; }
+.package-inspector { border-color: rgba(220,230,234,.12); background: #171d20; }
+.package-detail-kicker { color: #aabbb0; }
+.package-inspector strong { color: #edf0f1; }
+.package-inspector p { color: #aeb9bd; }
+.interest-block { background: rgba(255,255,255,.014); }
+.coursework-tags span { border-color: rgba(220,230,234,.12); background: rgba(255,255,255,.02); }
+.interest-personal { border-color: rgba(182,156,125,.2); background: #181a1b; }
+.dota-art { background: #201d1a; }
+.dota-game-art { filter: saturate(.72); }
+.dota-copy .micro-label, .dota-copy > a { color: #bca68a; }
+
+@media (max-width: 650px) {
+    .lowering-beam { background: linear-gradient(#aaa6bc, #8faeae); }
 }
