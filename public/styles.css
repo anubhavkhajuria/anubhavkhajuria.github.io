@@ -980,7 +980,7 @@ body::before {
 .button-primary:hover { border-color: var(--ink); background: transparent; color: var(--ink); }
 .hero-portrait { border-color: var(--line-bright); background: rgba(255,254,250,.78); box-shadow: 0 20px 55px rgba(48,43,34,.07); }
 .hero-portrait::before { inset: 18px -24px -22px 20px; border: 0; border-radius: 50%; background: #e5d6be; opacity: .82; }
-.hero-portrait img { height: auto; aspect-ratio: auto; object-fit: contain; object-position: center; filter: saturate(.9) brightness(1); }
+.hero-portrait img { width: auto; max-width: 100%; height: auto; max-height: none; aspect-ratio: auto; object-fit: contain; object-position: center; transform: none; filter: saturate(.9) brightness(1); }
 .portrait-index { border-color: rgba(255,254,250,.72); background: rgba(255,254,250,.86); color: #4b463d; }
 .scroll-cue { color: var(--muted); }
 .focus-strip { border-color: var(--line); background: rgba(238,234,225,.68); }
