@@ -5,6 +5,41 @@ const copy = document.getElementById('simulation-copy');
 const label = document.getElementById('simulation-label');
 const foot = document.getElementById('simulation-foot-label');
 const closeButton = document.getElementById('simulation-close');
+const navLinks = Array.from(document.querySelectorAll('.site-nav a'));
+const navSections = navLinks.map((link) => document.querySelector(link.hash)).filter(Boolean);
+
+const updatePageProgress = () => {
+    const pageLength = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = pageLength > 0 ? Math.min(100, Math.max(0, (window.scrollY / pageLength) * 100)) : 0;
+    document.getElementById('page-progress')?.style.setProperty('--progress', `${progress}%`);
+};
+
+let progressFrame = 0;
+const requestPageProgress = () => {
+    if (progressFrame) return;
+    progressFrame = window.requestAnimationFrame(() => {
+        updatePageProgress();
+        progressFrame = 0;
+    });
+};
+
+window.addEventListener('scroll', requestPageProgress, { passive: true });
+window.addEventListener('resize', requestPageProgress);
+updatePageProgress();
+
+if (window.IntersectionObserver && navSections.length) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+        const current = entries.filter((entry) => entry.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if (!current) return;
+        navLinks.forEach((link) => {
+            const active = link.hash === `#${current.target.id}`;
+            link.classList.toggle('is-current', active);
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+    }, { rootMargin: '-18% 0px -72% 0px', threshold: 0 });
+    navSections.forEach((section) => sectionObserver.observe(section));
+}
 
 const simulations = {
     cuda: {

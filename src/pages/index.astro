@@ -20,6 +20,7 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
+        <span class="page-progress" id="page-progress" aria-hidden="true"></span>
         <div class="container header-inner">
             <a class="wordmark" href="#home" aria-label="Anubhab Khajuria, home">
                 <span class="wordmark-mark" aria-hidden="true">ak</span>
@@ -104,7 +105,7 @@
                     </div>
                 </div>
                 <aside class="pipeline-card" aria-label="Compiler lowering example">
-                    <div class="pipeline-topline"><span>CO-DESIGN NOTE</span><span>IR → TARGET</span></div>
+                    <div class="pipeline-topline"><span>RICE / PASS TRACE</span><span>MLIR → RVV</span></div>
                     <div class="pipeline-step"><span class="step-number">01</span><code>tensor.matmul</code><span class="step-kind">model op</span></div>
                     <div class="pipeline-connector" aria-hidden="true">↓ <span>lower</span></div>
                     <div class="pipeline-step"><span class="step-number">02</span><code>vector.contract</code><span class="step-kind">compiler IR</span></div>
